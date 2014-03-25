@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="News Frontpage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9u-kK-HIU">
-                                <rect key="frame" x="59" y="38" width="202" height="36"/>
+                                <rect key="frame" x="59" y="64" width="202" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,8 +101,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="X9u-kK-HIU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="APO-ef-Uid"/>
-                            <constraint firstItem="X9u-kK-HIU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="38" id="XF5-yB-MrJ"/>
+                            <constraint firstItem="X9u-kK-HIU" firstAttribute="top" secondItem="kbD-xp-vnN" secondAttribute="bottom" id="hDx-rW-5y3"/>
+                            <constraint firstItem="X9u-kK-HIU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="yNo-GW-W4S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iSV-ns-u3y">
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="349"/>
+            <point key="canvasLocation" x="1207" y="361"/>
         </scene>
         <!--Sidebar View Controller - Sidebar-->
         <scene sceneID="8EI-Ei-zax">
@@ -124,6 +124,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="title" id="fJa-l0-Zsr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -147,6 +148,7 @@
                                         <constraint firstItem="rxX-VP-nbK" firstAttribute="top" secondItem="3ov-DI-eKW" secondAttribute="top" constant="7" id="Rsn-Mo-mbb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news" id="twk-R2-tis">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
@@ -181,6 +183,10 @@
                                         <constraint firstItem="4nl-oj-8cx" firstAttribute="top" secondItem="gav-8J-st0" secondAttribute="top" constant="3" id="qHU-KP-dMR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="2" kind="custom" customClass="SWRevealViewControllerSegue" id="NZA-24-t1k"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="comments" id="o12-Rc-YQL">
                                 <rect key="frame" x="0.0" y="110" width="320" height="44"/>
@@ -215,6 +221,10 @@
                                         <constraint firstItem="0QZ-5I-mzT" firstAttribute="leading" secondItem="wdT-De-pF4" secondAttribute="trailing" constant="8" symbolic="YES" id="mOE-DS-vtN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="X9u-eV-Fdb"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="map" id="dcw-Sn-1nc">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
@@ -249,6 +259,10 @@
                                         <constraint firstItem="Ndw-sx-bKl" firstAttribute="leading" secondItem="sRv-de-94c" secondAttribute="leading" constant="20" symbolic="YES" id="otV-gq-Liw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="CZq-aJ-KAU" kind="custom" customClass="SWRevealViewControllerSegue" id="Mkl-9s-X7v"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="calendar" id="QQR-B8-P8M">
                                 <rect key="frame" x="0.0" y="198" width="320" height="44"/>
@@ -283,6 +297,10 @@
                                         <constraint firstItem="VPi-6q-thI" firstAttribute="leading" secondItem="lLW-Cj-Zvf" secondAttribute="leading" constant="20" symbolic="YES" id="RL7-KZ-35B"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="guY-eH-Bhp"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wishlist" id="aUD-4g-tb8">
                                 <rect key="frame" x="0.0" y="242" width="320" height="44"/>
@@ -317,6 +335,10 @@
                                         <constraint firstAttribute="bottom" secondItem="Tke-61-r23" secondAttribute="bottom" constant="2" id="rEO-z9-Z4w"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="g2g-gX-0jH"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmark" id="Hq7-O0-iiI">
                                 <rect key="frame" x="0.0" y="286" width="320" height="44"/>
@@ -351,6 +373,10 @@
                                         <constraint firstAttribute="bottom" secondItem="nrB-Id-wkG" secondAttribute="bottom" constant="2" id="rRu-We-JeC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="d0g-xm-ecS"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tag" id="Xw5-nF-FpU">
                                 <rect key="frame" x="0.0" y="330" width="320" height="44"/>
@@ -385,6 +411,10 @@
                                         <constraint firstItem="PIt-tg-SKc" firstAttribute="top" secondItem="x4V-43-EFi" secondAttribute="top" constant="7" id="sNy-Dm-dcl"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="3qg-f7-ARa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -427,7 +457,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ynq-FO-pVk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <segue destination="Meq-yH-YF6" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="MMO-We-Wkg"/>
@@ -454,4 +484,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="NZA-24-t1k"/>
+        <segue reference="3qg-f7-ARa"/>
+    </inferredMetricsTieBreakers>
 </document>
