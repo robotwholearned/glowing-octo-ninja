@@ -223,7 +223,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="X9u-eV-Fdb"/>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhotoComments" customClass="SWRevealViewControllerSegue" id="X9u-eV-Fdb"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="map" id="dcw-Sn-1nc">
@@ -299,7 +299,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="guY-eH-Bhp"/>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhotoCalendar" customClass="SWRevealViewControllerSegue" id="guY-eH-Bhp"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wishlist" id="aUD-4g-tb8">
@@ -337,7 +337,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="g2g-gX-0jH"/>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhotoWishlist" customClass="SWRevealViewControllerSegue" id="g2g-gX-0jH"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmark" id="Hq7-O0-iiI">
@@ -375,7 +375,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="d0g-xm-ecS"/>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhotoBookmark" customClass="SWRevealViewControllerSegue" id="d0g-xm-ecS"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tag" id="Xw5-nF-FpU">
@@ -413,7 +413,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhoto" customClass="SWRevealViewControllerSegue" id="3qg-f7-ARa"/>
+                                    <segue destination="tiA-fo-4jg" kind="custom" identifier="showPhotoTag" customClass="SWRevealViewControllerSegue" id="3qg-f7-ARa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -485,7 +485,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="NZA-24-t1k"/>
         <segue reference="3qg-f7-ARa"/>
-        <segue reference="zaF-c6-UNR"/>
     </inferredMetricsTieBreakers>
 </document>
