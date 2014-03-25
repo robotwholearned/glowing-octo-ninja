@@ -67,16 +67,31 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //set title of navigation bar
     NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
     UINavigationController *destinationViewController = (UINavigationController *)segue.destinationViewController;
-    
     destinationViewController.title = [[self.menuItems objectAtIndex:indexPath.row] capitalizedString];
     
+    //if going to photo view, set photo based off of name of menu item (yuck)
+    //For “Comments” menu item, we’ll show the “comments_photo.jpg”.
     if ([segue.identifier isEqualToString:@"showPhoto"])
     {
         PhotoViewController *photoVC = (PhotoViewController*)segue.destinationViewController;
         NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [_menuItems objectAtIndex:indexPath.row]];
         photoVC.photoFilename = photoFilename;
+    }
+
+    //manage the view transition and tell SWRevealViewController the new front view controller for display.
+    //reuse the navigation controller and replace the view controller with destination view controller.
+    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] )
+    {
+        SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;
+        
+        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc){
+          UINavigationController *navController = (UINavigationController*)self.revealViewController.frontViewController;
+            [navController setViewControllers:@[dvc] animated:NO];
+            [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+        };
     }
 }
 
