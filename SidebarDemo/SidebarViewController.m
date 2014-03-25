@@ -8,10 +8,12 @@
 
 #import "SidebarViewController.h"
 #import "PhotoViewController.h"
+#import "SWRevealViewController.h"
 
 @interface SidebarViewController ()
 
 @property (nonatomic, strong) NSArray *menuItems;
+
 @end
 
 @implementation SidebarViewController
@@ -28,7 +30,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+    
+    _menuItems = @[@"title", @"news", @"comments", @"map", @"calendar", @"wishlist", @"bookmark", @"tag"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +54,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [self.menuItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
