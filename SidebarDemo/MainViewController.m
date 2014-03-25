@@ -18,14 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.title = @"News";
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
-
+    
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
