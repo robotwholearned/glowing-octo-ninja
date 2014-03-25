@@ -22,6 +22,8 @@
     self.title = @"News";
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     _sidebarButton.target = self.revealViewController;
+    //revealToggle provided by the SWRevealViewController
+    //it handles the expansion and contraction of the sidebar menu.
     _sidebarButton.action = @selector(revealToggle:);
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
