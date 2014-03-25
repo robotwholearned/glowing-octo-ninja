@@ -65,4 +65,19 @@
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath =[self.tableView indexPathForSelectedRow];
+    UINavigationController *destinationViewController = (UINavigationController *)segue.destinationViewController;
+    
+    destinationViewController.title = [[self.menuItems objectAtIndex:indexPath.row] capitalizedString];
+    
+    if ([segue.identifier isEqualToString:@"showPhoto"])
+    {
+        PhotoViewController *photoVC = (PhotoViewController*)segue.destinationViewController;
+        NSString *photoFilename = [NSString stringWithFormat:@"%@_photo.jpg", [_menuItems objectAtIndex:indexPath.row]];
+        photoVC.photoFilename = photoFilename;
+    }
+}
+
 @end
